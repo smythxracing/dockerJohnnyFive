@@ -79,6 +79,6 @@ RUN mkdir -p usr/src/nodeCode && cp -a /tmp/node_modules usr/src/nodeCode/
 # From here we load our application's code in, therefore the previous docker
 # "layer" thats been cached will be used if possible
 WORKDIR usr/src/nodeCode
-ADD ./app usr/src/nodeCode
+ADD ./app/ .
 
 CMD ["node", "server.js"]
